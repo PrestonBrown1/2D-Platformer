@@ -1,2 +1,14 @@
 # 2D-Platformer
-Project 4 for MSCH-220
+Context and date
+Description
+
+## Implementation
+
+## What Makes this a Game?
+
+## References
+
+## Future Development
+More refined animations on Player
+
+## Created by Preston Brown
