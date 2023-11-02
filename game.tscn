@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://dv08x4os2dorm"]
+[gd_scene load_steps=21 format=3 uid="uid://dv08x4os2dorm"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_isqnd"]
 [ext_resource type="Texture2D" uid="uid://7pgavlhvutdw" path="res://Assets/Player/Astronaut.png" id="2_lbv57"]
+[ext_resource type="PackedScene" uid="uid://0xbcniu768h3" path="res://Levels/level1.tscn" id="3_hsrq2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bulj4"]
 size = Vector2(1152, 50)
@@ -139,6 +140,7 @@ position = Vector2(576, 622)
 shape = SubResource("RectangleShape2D_bulj4")
 
 [node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(70, 490)
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_isqnd")
 
@@ -150,3 +152,10 @@ autoplay = "Walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-24, -1)
 shape = SubResource("RectangleShape2D_tt8wg")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-233.333, -1633.33)
+scale = Vector2(3.33333, 3.33333)
+offset = Vector2(70, 440)
+
+[node name="Level1" parent="." instance=ExtResource("3_hsrq2")]
