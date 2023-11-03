@@ -3,6 +3,10 @@ Context and date
 Description
 
 ## Implementation
+Player Texture
+Player Animations
+Custom Titles, different ones for Different Levels
+Different Level Layouts
 
 ## What Makes this a Game?
 
@@ -10,5 +14,6 @@ Description
 
 ## Future Development
 More refined animations on Player
+Better level design and more details to tiles
 
 ## Created by Preston Brown
