@@ -1,0 +1,148 @@
+[gd_scene load_steps=19 format=3 uid="uid://csln47ugopoo5"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_2m4i0"]
+[ext_resource type="Texture2D" uid="uid://7pgavlhvutdw" path="res://Assets/Player/Astronaut.png" id="2_mq1nd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flp2x"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(0, 1920, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgaen"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(320, 1920, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bds8v"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3a5j"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(0, 1280, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi3ym"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(320, 1280, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkkbt"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(320, 1600, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35q06"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g88w"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrsgy"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53x14"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(320, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd4s0"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(0, 640, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7hmq"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(320, 640, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpjmt"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(0, 960, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ewod"]
+atlas = ExtResource("2_mq1nd")
+region = Rect2(320, 960, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w8n07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flp2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgaen")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bds8v")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3a5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi3ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkkbt")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35q06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g88w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrsgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53x14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wd4s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7hmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpjmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ewod")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt8wg"]
+size = Vector2(153, 318)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(70, 490)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_2m4i0")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w8n07")
+animation = &"Walk"
+autoplay = "Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.50002, -0.999756)
+shape = SubResource("RectangleShape2D_tt8wg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-233.333, -1633.33)
+scale = Vector2(3.33333, 3.33333)
+offset = Vector2(70, 440)
+zoom = Vector2(0.5, 0.5)
