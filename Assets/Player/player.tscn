@@ -124,8 +124,9 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt8wg"]
-size = Vector2(153, 318)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_754w2"]
+radius = 73.3333
+height = 326.667
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(70, 490)
@@ -138,8 +139,8 @@ animation = &"Walk"
 autoplay = "Walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.50002, -0.999756)
-shape = SubResource("RectangleShape2D_tt8wg")
+position = Vector2(-3.33333, -0.00012207)
+shape = SubResource("CapsuleShape2D_754w2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-233.333, -1633.33)

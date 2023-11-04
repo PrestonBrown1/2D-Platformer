@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp8dftogmljkm"]
+[gd_scene load_steps=4 format=3 uid="uid://bp8dftogmljkm"]
 
+[ext_resource type="Script" path="res://space_ship.gd" id="1_n4482"]
 [ext_resource type="Texture2D" uid="uid://c5cvjep3wwtmt" path="res://Assets/SpaceShip.png" id="1_xkauh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_up2e6"]
 size = Vector2(107, 182)
 
 [node name="SpaceShip" type="Node2D"]
+script = ExtResource("1_n4482")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xkauh")
@@ -22,3 +24,5 @@ polygon = PackedVector2Array(-90, 90, -29, 30, 42.0419, 29.1543, 31.6628, -55.00
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(25.5, -37)
 shape = SubResource("RectangleShape2D_up2e6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
