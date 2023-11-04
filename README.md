@@ -3,12 +3,12 @@ Context and date
 Description
 
 ## Implementation
-Player Texture
-Player Animations
-Custom Tiles, different ones for Different Levels
-Different Level Layouts
-Spaceship Texture to get to the next Level
-Lives System
+Player Texture\n
+Player Animations\n
+Custom Tiles, different ones for Different Levels\n
+Different Level Layouts\n
+Spaceship Texture to get to the next Level\n
+Lives System\n
 
 ## What Makes this a Game?
 
