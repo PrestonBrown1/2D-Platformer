@@ -5,9 +5,10 @@ Description
 ## Implementation
 Player Texture
 Player Animations
-Custom Titles, different ones for Different Levels
+Custom Tiles, different ones for Different Levels
 Different Level Layouts
 Spaceship Texture to get to the next Level
+Lives System
 
 ## What Makes this a Game?
 
@@ -16,5 +17,6 @@ Spaceship Texture to get to the next Level
 ## Future Development
 More refined animations on Player
 Better level design and more details to tiles
+More tiles to increase variety
 
 ## Created by Preston Brown
