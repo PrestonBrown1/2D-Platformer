@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://bemaqn6nodoo0"]
+
+[ext_resource type="Texture2D" uid="uid://dap28npjlg3gi" path="res://Assets/Tiles.png" id="1_j205l"]
+[ext_resource type="Script" path="res://Levels/Deathbox.gd" id="2_5n51a"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qspb3"]
+texture = ExtResource("1_j205l")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(50, -50, 50, 50, -50, 50)
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, 50, -50, 50)
+
+[sub_resource type="TileSet" id="TileSet_dyuo3"]
+tile_size = Vector2i(10, 10)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_qspb3")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4h5vv"]
+size = Vector2(11287.3, 457.5)
+
+[node name="Level4" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_dyuo3")
+format = 2
+layer_0/tile_data = PackedInt32Array(3932164, 65536, 3, 3932174, 0, 3, 3932184, 0, 3, 3932194, 0, 3, 3932204, 0, 3, 3932214, 327680, 3, 3276836, 196608, 3, 5832749, 65536, 3, 5832759, 131072, 3, 7602231, 131072, 3, 7602221, 65536, 3, 10616877, 65536, 3, 10616887, 131072, 3, 12714074, 262144, 3, 12714084, 0, 3, 12714094, 0, 3, 12714104, 0, 3, 12714114, 0, 3, 12058754, 262144, 3, 12058764, 0, 3, 12058774, 0, 3, 12058784, 0, 3, 12058734, 196608, 3, 12058794, 0, 3, 11403434, 262144, 3, 11403444, 0, 3, 11403454, 0, 3, 11403464, 0, 3, 11403474, 0, 3, 10748114, 262144, 3, 10748124, 0, 3, 10748134, 0, 3, 10748144, 0, 3, 10748154, 131072, 3, 10092767, 196608, 3, 10748102, 196608, 3, 10748199, 65536, 3, 10748209, 327680, 3, 10748249, 262144, 3, 10748259, 0, 3, 10748269, 0, 3, 10748279, 0, 3, 10748289, 0, 3, 10748299, 0, 3, 10748309, 131072, 3, 9175443, 65536, 3, 9175453, 0, 3, 9175454, 0, 3, 9175464, 0, 3, 9175474, 0, 3, 9175484, 0, 3, 10748328, 65536, 3, 10748338, 131072, 3, 8520098, 196608, 3, 10092918, 196608, 3, 12714415, 65536, 3, 12714425, 131072, 3, 9175494, 0, 3, 9175504, 0, 3, 9175514, 0, 3, 9175524, 0, 3, 9175534, 0, 3, 9175544, 131072, 3, 15204810, 65536, 3, 15204820, 0, 3, 15204830, 0, 3, 15204840, 0, 3, 15204850, 131072, 3, 17367577, 65536, 3, 17367587, 0, 3, 17367597, 131072, 3, 17367636, 65536, 3, 17367646, 0, 3, 17367656, 131072, 3, 17367694, 65536, 3, 16712286, 196608, 3, 14549459, 196608, 3, 17367704, 0, 3, 17367714, 327680, 3, 18023074, 0, 3, 18023084, 0, 3, 18023094, 327680, 3, 18678455, 0, 3, 18023064, 65536, 3, 18678445, 65536, 3, 18678465, 0, 3, 18678475, 327680, 3, 19333835, 0, 3, 19333825, 65536, 3, 19333845, 0, 3, 19333855, 0, 3, 19333865, 0, 3, 19333875, 0, 3, 19333885, 0, 3, 18678525, 262144, 3, 18678535, 0, 3, 18678545, 0, 3, 18023185, 262144, 3, 18678555, 131072, 3, 18023195, 0, 3, 18023205, 0, 3, 17367845, 262144, 3, 18023215, 131072, 3, 17367855, 0, 3, 17367865, 131072, 3, 19333895, 131072, 3, 16712336, 196608, 3, 16712503, 196608, 3, 18678501, 196608, 3)
+
+[node name="Deathbox" type="Area2D" parent="."]
+script = ExtResource("2_5n51a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathbox"]
+position = Vector2(3890.13, 3569.28)
+shape = SubResource("RectangleShape2D_4h5vv")
+
+[connection signal="body_entered" from="Deathbox" to="Deathbox" method="_on_body_entered"]
