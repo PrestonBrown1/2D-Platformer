@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://0xbcniu768h3"]
+[gd_scene load_steps=8 format=3 uid="uid://0xbcniu768h3"]
 
 [ext_resource type="Texture2D" uid="uid://dap28npjlg3gi" path="res://Assets/Tiles.png" id="1_20sob"]
 [ext_resource type="PackedScene" uid="uid://bp8dftogmljkm" path="res://space_ship.tscn" id="2_7o8el"]
 [ext_resource type="Script" path="res://Levels/Deathbox.gd" id="3_gx6y1"]
+[ext_resource type="PackedScene" uid="uid://c148jmceofmno" path="res://Assets/Enemies/alien_crab.tscn" id="4_8nnvh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lk5py"]
 texture = ExtResource("1_20sob")
@@ -10,22 +11,22 @@ texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50.25, -50.25, 49.75, -50.25, 49.75, 50, -50.25, 50)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -40.125, -40, -50.125, 50, -50.1875, 50, 49.875, -39.875, 50, -49.875, 40.125)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50.125, -50.125, 39.875, -50, 49.875, -40, 50, 40, 39.625, 50, -50, 50.25)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 3:0/0 = 0
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
 4:0/0 = 0
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(49.851, -50.2046, -50, 49.875, 49.875, 49.875)
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(50, -50, 50, 50, -50, 50)
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
@@ -104,7 +105,7 @@ texture_region_size = Vector2i(100, 100)
 5:0/0 = 0
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50.1162, -50.2046, 50.0278, 50.0278, -50.1162, 50.0278)
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, 50, -50, 50)
 5:1/0 = 0
 5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:1/0/physics_layer_0/angular_velocity = 0.0
@@ -145,5 +146,16 @@ script = ExtResource("3_gx6y1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deathbox"]
 position = Vector2(2169, 1894)
 shape = SubResource("RectangleShape2D_vqqer")
+
+[node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="Alien Crab" parent="EnemyContainer" instance=ExtResource("4_8nnvh")]
+position = Vector2(900, 400)
+
+[node name="Alien Crab2" parent="EnemyContainer" instance=ExtResource("4_8nnvh")]
+position = Vector2(1894, 387)
+
+[node name="Alien Crab3" parent="EnemyContainer" instance=ExtResource("4_8nnvh")]
+position = Vector2(3055, 482)
 
 [connection signal="body_entered" from="Deathbox" to="Deathbox" method="_on_body_entered"]

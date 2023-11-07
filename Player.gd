@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-
+var health = 100
+var dmg = 10
 const SPEED = 300.0
 const JUMP_VELOCITY = -800.0
 
@@ -37,3 +38,14 @@ func _physics_process(delta):
 
 	move_and_slide()
 	floor_max_angle = deg_to_rad(60)
+
+func damage(d):
+	health += d
+	if health <= 0:
+		die()
+
+func die():
+	health = 100
+	var global = get_node("/root/Global")
+	global.updateLives(-1)
+	position = Vector2(70, 490)
