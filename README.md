@@ -3,12 +3,13 @@ Context and date
 Description
 
 ## Implementation
-Player Texture,
-Player Animations,
+Player Texture and Animations,
 Custom Tiles- different ones for Different Levels,
 Different Level Layouts,
 Spaceship Texture to get to the next level,
-Lives System,
+Lives and Health System,
+Alien Crab Enemy Texture and Animations,
+Alien Crab Behavior,
 
 ## What Makes this a Game?
 
