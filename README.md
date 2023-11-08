@@ -10,6 +10,7 @@ Spaceship Texture to get to the next level,
 Lives and Health System,
 Alien Crab Enemy Texture and Animations,
 Alien Crab Behavior,
+Ability for Player to Shoot Bullets,
 
 ## What Makes this a Game?
 
