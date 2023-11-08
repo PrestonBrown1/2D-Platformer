@@ -12,6 +12,8 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	var global = get_node("/root/Global")
-	global.updateLives(-1)
-	body.position = Vector2(70, 490)
+	if (body.name == "Player"):
+		var global = get_node("/root/Global")
+		global.updateLives(-1)
+		body.position = Vector2(70, 490)
+	else: return

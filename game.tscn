@@ -8,3 +8,5 @@
 [node name="Level1" parent="." instance=ExtResource("3_hsrq2")]
 
 [node name="Player" parent="." instance=ExtResource("2_7qknw")]
+
+[node name="Projectiles" type="Node2D" parent="."]
