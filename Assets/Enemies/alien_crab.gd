@@ -4,6 +4,7 @@ var health = 10
 var dmg = 10
 const SPEED = 150
 var player = null
+var dead = false
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -18,14 +19,14 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	var distanceToPlayer = getDistanceToPlayer()
-	
-	if abs(distanceToPlayer) <= 800 and abs(distanceToPlayer) >= 100:
-		move()
-	elif abs(distanceToPlayer) > 800:
-		$AnimatedSprite2D.stop()
-		velocity.x = 0
-	elif abs(distanceToPlayer) < 100:
-		attack()
+	if !dead:
+		if abs(distanceToPlayer) <= 800 and abs(distanceToPlayer) >= 100:
+			move()
+		elif abs(distanceToPlayer) > 800:
+			$AnimatedSprite2D.stop()
+			velocity.x = 0
+		elif abs(distanceToPlayer) < 100:
+			attack()
 
 	move_and_slide()
 
@@ -55,3 +56,17 @@ func attack():
 	else:
 		$AnimatedSprite2D.play("Attack")
 		player.damage(-dmg)
+		
+func damage(d):
+	print("Hit for " + str(d))
+	health += d
+	if health <= 0:
+		die()
+
+func die():
+	dead = true
+	velocity = Vector2.ZERO
+	$AnimatedSprite2D.stop()
+	$AnimatedSprite2D.animation = "Die"
+	$AnimatedSprite2D.play()
+	$CollisionShape2D.shape.height = 10

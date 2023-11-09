@@ -69,4 +69,15 @@ func shoot():
 	var newBullet = bullet.instantiate()
 	newBullet.position = global_position
 	
-	projectiles.add_child(newBullet)
+	var angle = atan((global_position.y - mousePosition.y) / (mousePosition.x - global_position.x))
+	if mousePosition.y < global_position.y and mousePosition.x < global_position.x:
+		angle *= -1
+		angle = deg_to_rad(180) - angle
+	elif mousePosition.y > global_position.y and mousePosition.x < global_position.x:
+		angle += deg_to_rad(180)
+	
+	newBullet.rotation -= angle - deg_to_rad(90)
+	#print("Angle: " + str(rad_to_deg(angle)))
+	#print("Rotation: " + str(rad_to_deg(newBullet.rotation)))
+	
+	projectiles.add_child(newBullet) 

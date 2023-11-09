@@ -5,7 +5,9 @@
 
 [node name="Game" type="Node2D"]
 
-[node name="Level1" parent="." instance=ExtResource("3_hsrq2")]
+[node name="LevelContainer" type="Node2D" parent="."]
+
+[node name="Level1" parent="LevelContainer" instance=ExtResource("3_hsrq2")]
 
 [node name="Player" parent="." instance=ExtResource("2_7qknw")]
 

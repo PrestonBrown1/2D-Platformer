@@ -14,12 +14,13 @@ func _process(delta):
 
 func updateLevel():
 	var game = get_node("/root/Game")
-	var lvlScn = get_node("/root/Game/Level" + str(level))
+	var levelContainer = get_node("/root/Game/LevelContainer")
+	var lvlScn = get_node("/root/Game/LevelContainer/Level" + str(level))
 	lvlScn.queue_free()
 	level += 1
 	lvlScn = load("res://Levels/level" + str(level) + ".tscn")
 	var newScn = lvlScn.instantiate()
-	game.add_child(newScn)
+	levelContainer.add_child(newScn)
 	var player = get_node("/root/Game/Player")
 	player.position = Vector2(70, 490)
 
