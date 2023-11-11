@@ -1,7 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://csln47ugopoo5"]
+[gd_scene load_steps=28 format=3 uid="uid://csln47ugopoo5"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_2m4i0"]
 [ext_resource type="Texture2D" uid="uid://7pgavlhvutdw" path="res://Assets/Player/Astronaut.png" id="2_mq1nd"]
+[ext_resource type="Theme" uid="uid://csj0kah784ysv" path="res://Assets/theme.tres" id="3_20aef"]
+[ext_resource type="Script" path="res://Assets/Player/Score.gd" id="4_5kh42"]
+[ext_resource type="Script" path="res://Assets/Player/Health.gd" id="5_ephw6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_by0fy"]
 atlas = ExtResource("2_mq1nd")
@@ -196,3 +199,50 @@ position = Vector2(-233.333, -1633.33)
 scale = Vector2(3.33333, 3.33333)
 offset = Vector2(70, 440)
 zoom = Vector2(0.5, 0.5)
+
+[node name="HUD" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1087.0
+offset_top = -210.0
+offset_right = 1220.0
+offset_bottom = 1094.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/HUD"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 50.0
+color = Color(0, 0, 0, 0.392157)
+
+[node name="Score" type="Label" parent="Camera2D/HUD"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 50.0
+theme = ExtResource("3_20aef")
+theme_override_font_sizes/font_size = 40
+text = "Score: 0"
+script = ExtResource("4_5kh42")
+
+[node name="Health" type="Label" parent="Camera2D/HUD"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme = ExtResource("3_20aef")
+theme_override_font_sizes/font_size = 30
+text = "Health: 100"
+horizontal_alignment = 1
+script = ExtResource("5_ephw6")

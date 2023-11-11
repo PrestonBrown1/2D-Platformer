@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://7vwdhhp4m3oa"]
+[gd_scene load_steps=9 format=3 uid="uid://7vwdhhp4m3oa"]
 
 [ext_resource type="Texture2D" uid="uid://dap28npjlg3gi" path="res://Assets/Tiles.png" id="1_mta0c"]
 [ext_resource type="Script" path="res://Levels/Deathbox.gd" id="2_h4033"]
 [ext_resource type="PackedScene" uid="uid://bp8dftogmljkm" path="res://space_ship.tscn" id="3_u8kj8"]
+[ext_resource type="PackedScene" uid="uid://c148jmceofmno" path="res://Assets/Enemies/alien_crab.tscn" id="4_2jf4w"]
+[ext_resource type="PackedScene" uid="uid://dnuoj082dpr4c" path="res://Assets/Enemies/alien_scuttle.tscn" id="5_lvopd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcrdx"]
 texture = ExtResource("1_mta0c")
@@ -145,5 +147,34 @@ shape = SubResource("RectangleShape2D_yg34a")
 
 [node name="SpaceShip" parent="." instance=ExtResource("3_u8kj8")]
 position = Vector2(8311.09, 1285.31)
+
+[node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="Alien Crab" parent="EnemyContainer" instance=ExtResource("4_2jf4w")]
+position = Vector2(828, 620)
+
+[node name="Alien Scuttle" parent="EnemyContainer" instance=ExtResource("5_lvopd")]
+position = Vector2(2537.48, 564.445)
+
+[node name="Alien Scuttle2" parent="EnemyContainer" instance=ExtResource("5_lvopd")]
+position = Vector2(2809.01, 275.945)
+
+[node name="Alien Scuttle3" parent="EnemyContainer" instance=ExtResource("5_lvopd")]
+position = Vector2(3148.42, 1497.83)
+
+[node name="Alien Crab2" parent="EnemyContainer" instance=ExtResource("4_2jf4w")]
+position = Vector2(3455.61, 1561.87)
+
+[node name="Alien Scuttle4" parent="EnemyContainer" instance=ExtResource("5_lvopd")]
+position = Vector2(4030.89, 1379.03)
+
+[node name="Alien Scuttle5" parent="EnemyContainer" instance=ExtResource("5_lvopd")]
+position = Vector2(5580.53, 836.281)
+
+[node name="Alien Crab3" parent="EnemyContainer" instance=ExtResource("4_2jf4w")]
+position = Vector2(7065.12, 1465.71)
+
+[node name="Alien Crab4" parent="EnemyContainer" instance=ExtResource("4_2jf4w")]
+position = Vector2(7873.08, 1563.87)
 
 [connection signal="body_entered" from="Deathbox" to="Deathbox" method="_on_body_entered"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxs8h2h5ns87x"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_ivfgw"]
+[ext_resource type="Theme" uid="uid://csj0kah784ysv" path="res://Assets/theme.tres" id="1_xmf3o"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_ivfgw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.588235)
+
+[node name="Title" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.5
+offset_top = -174.0
+offset_right = 331.5
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xmf3o")
+theme_override_font_sizes/font_size = 20
+text = "Totally Awesome Fabulous Super Crazy Action-Packed Space Alien Platformer Game!!!!"
+
+[node name="Play" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -74.0
+offset_right = 100.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xmf3o")
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[node name="Quit" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -14.0
+offset_right = 100.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xmf3o")
+theme_override_font_sizes/font_size = 40
+text = "Quit
+"
+
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]

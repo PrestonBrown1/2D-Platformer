@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-var health = 10
-var dmg = 10
+var health = 100
+var dmg = 50
 const SPEED = 150
 var player = null
 var dead = false
@@ -31,11 +31,14 @@ func _physics_process(delta):
 			attack()
 
 	move_and_slide()
+	floor_max_angle = deg_to_rad(90)
 
 func move():
 	if getDistanceToPlayer() < 0:
+		$AnimatedSprite2D.flip_h = false
 		velocity.x = -SPEED * (getDistanceToPlayer() / getDistanceToPlayer())
 	else:
+		$AnimatedSprite2D.flip_h = true
 		velocity.x = SPEED * (getDistanceToPlayer() / getDistanceToPlayer())
 	
 	if $AnimatedSprite2D.is_playing(): return
@@ -67,10 +70,11 @@ func damage(d):
 			die()
 
 func die():
-	global.updateScore(10)
+	global.updateScore(100)
 	dead = true
 	velocity = Vector2.ZERO
 	$AnimatedSprite2D.stop()
 	$AnimatedSprite2D.animation = "Die"
 	$AnimatedSprite2D.play()
+	$CollisionPolygon2D.queue_free()
 	$CollisionShape2D.shape.height = 10

@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bemaqn6nodoo0"]
+[gd_scene load_steps=8 format=3 uid="uid://bemaqn6nodoo0"]
 
 [ext_resource type="Texture2D" uid="uid://dap28npjlg3gi" path="res://Assets/Tiles.png" id="1_j205l"]
 [ext_resource type="Script" path="res://Levels/Deathbox.gd" id="2_5n51a"]
+[ext_resource type="PackedScene" uid="uid://c148jmceofmno" path="res://Assets/Enemies/alien_crab.tscn" id="3_vfe0d"]
+[ext_resource type="PackedScene" uid="uid://dnuoj082dpr4c" path="res://Assets/Enemies/alien_scuttle.tscn" id="4_f75tw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qspb3"]
 texture = ExtResource("1_j205l")
@@ -105,5 +107,46 @@ script = ExtResource("2_5n51a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deathbox"]
 position = Vector2(3890.13, 3569.28)
 shape = SubResource("RectangleShape2D_4h5vv")
+
+[node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="Alien Crab" parent="EnemyContainer" instance=ExtResource("3_vfe0d")]
+position = Vector2(8045.7, 2515.96)
+
+[node name="Alien Scuttle" parent="EnemyContainer" instance=ExtResource("4_f75tw")]
+position = Vector2(1446.05, 1659.07)
+
+[node name="Alien Scuttle2" parent="EnemyContainer" instance=ExtResource("4_f75tw")]
+position = Vector2(7401.98, 2757.55)
+
+[node name="Alien Scuttle3" parent="EnemyContainer" instance=ExtResource("4_f75tw")]
+position = Vector2(4697.05, 1214.59)
+
+[node name="Alien Scuttle4" parent="EnemyContainer" instance=ExtResource("4_f75tw")]
+position = Vector2(4804.99, 2160.68)
+
+[node name="Alien Scuttle5" parent="EnemyContainer" instance=ExtResource("4_f75tw")]
+position = Vector2(3827.15, 1443.18)
+
+[node name="Alien Scuttle6" parent="EnemyContainer" instance=ExtResource("4_f75tw")]
+position = Vector2(7757.56, 2617.86)
+
+[node name="Alien Scuttle7" parent="EnemyContainer" instance=ExtResource("4_f75tw")]
+position = Vector2(7078.15, 2662.3)
+
+[node name="Alien Crab2" parent="EnemyContainer" instance=ExtResource("3_vfe0d")]
+position = Vector2(6780.99, 2502.51)
+
+[node name="Alien Crab3" parent="EnemyContainer" instance=ExtResource("3_vfe0d")]
+position = Vector2(5479.71, 2533.49)
+
+[node name="Alien Crab4" parent="EnemyContainer" instance=ExtResource("3_vfe0d")]
+position = Vector2(4298.68, 1288.97)
+
+[node name="Alien Crab5" parent="EnemyContainer" instance=ExtResource("3_vfe0d")]
+position = Vector2(425.424, 507.968)
+
+[node name="Alien Crab6" parent="EnemyContainer" instance=ExtResource("3_vfe0d")]
+position = Vector2(1892.18, 1606.45)
 
 [connection signal="body_entered" from="Deathbox" to="Deathbox" method="_on_body_entered"]

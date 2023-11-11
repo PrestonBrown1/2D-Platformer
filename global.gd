@@ -2,6 +2,7 @@ extends Node
 
 var level = 1
 var lives = 3
+var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,3 +28,9 @@ func updateLevel():
 func updateLives(l):
 	lives += l
 	print(lives)
+
+func getScore():
+	return score
+	
+func updateScore(s):
+	score += s
