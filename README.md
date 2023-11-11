@@ -1,6 +1,6 @@
 # 2D-Platformer
-Context and date
-Description
+A very simple 2D Platformer game set in Space, on different planets. You kill aliens with your weaponized suit! They don't like you.
+11/10/2023
 
 ## Implementation
 Player Texture and Animations,
@@ -16,6 +16,7 @@ Main Menu with Play and Quit,
 UI Displaying Score and Health
 
 ## What Makes this a Game?
+It is complete with a score, health, enemies, and multiple levels
 
 ## References
 Black Future font by Storytype Studio: https://www.dafont.com/black-future.font
@@ -29,6 +30,8 @@ Improve Main Menu and UI,
 Add ending screen,
 Music and Sound Effects,
 Tweak behavior of enemies,
-Boss Enemy on last level
+Boss Enemy on last level,
+Background Image,
+Instructions on Controls
 
 ## Created by Preston Brown
