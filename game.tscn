@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv08x4os2dorm"]
+[gd_scene load_steps=4 format=3 uid="uid://dv08x4os2dorm"]
 
 [ext_resource type="PackedScene" uid="uid://csln47ugopoo5" path="res://Assets/Player/player.tscn" id="2_7qknw"]
 [ext_resource type="PackedScene" uid="uid://0xbcniu768h3" path="res://Levels/level1.tscn" id="3_hsrq2"]
+[ext_resource type="AudioStream" uid="uid://dckpqksicni3k" path="res://Assets/2DPlatformer Music.mp3" id="3_qevri"]
 
 [node name="Game" type="Node2D"]
 
@@ -12,3 +13,7 @@
 [node name="Player" parent="." instance=ExtResource("2_7qknw")]
 
 [node name="Projectiles" type="Node2D" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qevri")
+autoplay = true
