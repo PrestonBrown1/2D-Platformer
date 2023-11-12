@@ -1,17 +1,13 @@
-extends Node2D
+extends Sprite2D
+var global
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	global = get_node("/root/Global")
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
-
-func _on_play_pressed():
-	get_tree().change_scene_to_file("res://instructions.tscn")
-
-
-func _on_quit_pressed():
-	get_tree().quit()
+	var lives = global.lives
+	if lives < 2:
+		queue_free()

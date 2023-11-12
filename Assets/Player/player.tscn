@@ -1,10 +1,13 @@
-[gd_scene load_steps=28 format=3 uid="uid://csln47ugopoo5"]
+[gd_scene load_steps=31 format=3 uid="uid://csln47ugopoo5"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_2m4i0"]
 [ext_resource type="Texture2D" uid="uid://7pgavlhvutdw" path="res://Assets/Player/Astronaut.png" id="2_mq1nd"]
 [ext_resource type="Theme" uid="uid://csj0kah784ysv" path="res://Assets/theme.tres" id="3_20aef"]
 [ext_resource type="Script" path="res://Assets/Player/Score.gd" id="4_5kh42"]
 [ext_resource type="Script" path="res://Assets/Player/Health.gd" id="5_ephw6"]
+[ext_resource type="Script" path="res://Assets/Player/Life1.gd" id="6_r0wt1"]
+[ext_resource type="Script" path="res://Assets/Player/Life2.gd" id="7_nrrdh"]
+[ext_resource type="Script" path="res://Assets/Player/Life3.gd" id="8_3hmjj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_by0fy"]
 atlas = ExtResource("2_mq1nd")
@@ -246,3 +249,29 @@ theme_override_font_sizes/font_size = 30
 text = "Health: 100"
 horizontal_alignment = 1
 script = ExtResource("5_ephw6")
+
+[node name="Lives" type="Node2D" parent="Camera2D/HUD"]
+
+[node name="Life1" type="Sprite2D" parent="Camera2D/HUD/Lives"]
+position = Vector2(60, 1236)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_mq1nd")
+region_enabled = true
+region_rect = Rect2(0, 0, 320, 320)
+script = ExtResource("6_r0wt1")
+
+[node name="Life2" type="Sprite2D" parent="Camera2D/HUD/Lives"]
+position = Vector2(160, 1236)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_mq1nd")
+region_enabled = true
+region_rect = Rect2(0, 0, 320, 320)
+script = ExtResource("7_nrrdh")
+
+[node name="Life3" type="Sprite2D" parent="Camera2D/HUD/Lives"]
+position = Vector2(260, 1236)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_mq1nd")
+region_enabled = true
+region_rect = Rect2(0, 0, 320, 320)
+script = ExtResource("8_3hmjj")

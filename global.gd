@@ -27,7 +27,9 @@ func updateLevel():
 
 func updateLives(l):
 	lives += l
-	print(lives)
+	
+	if lives < 0:
+		get_tree().change_scene_to_file("res://end_game.tscn")
 
 func getScore():
 	return score

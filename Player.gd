@@ -5,9 +5,13 @@ var dmg = 10
 const SPEED = 300.0
 const JUMP_VELOCITY = -800.0
 var bullet = load("res://bullet1.tscn")
+var global
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _ready():
+	global = get_node("/root/Global")
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -51,6 +55,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 	floor_max_angle = deg_to_rad(60)
+	
 
 func damage(d):
 	health += d
