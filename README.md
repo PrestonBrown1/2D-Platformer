@@ -13,7 +13,8 @@ Alien Crab Behavior,
 Ability for Player to Shoot Bullets,
 Alien Scuttle Enemy Texture and Animations,
 Main Menu with Play and Quit,
-UI Displaying Score and Health
+UI Displaying Score Health and Lives,
+Screen explaining the Controls,
 Music
 
 ## What Makes this a Game?
@@ -32,7 +33,6 @@ Add ending screen,
 Sound Effects,
 Tweak behavior of enemies,
 Boss Enemy on last level,
-Background Image,
-Instructions on Controls
+Background Image
 
 ## Created by Preston Brown
