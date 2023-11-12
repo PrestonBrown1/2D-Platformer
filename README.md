@@ -14,6 +14,7 @@ Ability for Player to Shoot Bullets,
 Alien Scuttle Enemy Texture and Animations,
 Main Menu with Play and Quit,
 UI Displaying Score and Health
+Music
 
 ## What Makes this a Game?
 It is complete with a score, health, enemies, and multiple levels
@@ -28,7 +29,7 @@ More tiles to increase variety,
 Fix weird texture glitch on Alien Scuttle,
 Improve Main Menu and UI,
 Add ending screen,
-Music and Sound Effects,
+Sound Effects,
 Tweak behavior of enemies,
 Boss Enemy on last level,
 Background Image,
